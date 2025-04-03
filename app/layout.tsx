@@ -13,9 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DevPortfolio | Creative Developer & Designer",
+  title: "ShiltonPortfolio | Creative Developer & Designer",
   description:
-    "Portfolio of a creative developer and designer specializing in building engaging digital experiences with modern web technologies.",
+    "Portfolio of Shilton Rodrigues a creative frontend developer and designer specializing in building engaging digital experiences with modern web technologies.",
   keywords: [
     "developer",
     "designer",
@@ -32,24 +32,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.example.com/",
-    title: "DevPortfolio | Creative Developer & Designer",
+    title: "ShiltonPortfolio | Creative Developer & Designer",
     description:
-      "Portfolio of a creative developer and designer specializing in building engaging digital experiences with modern web technologies.",
-    siteName: "DevPortfolio",
+      "Portfolio of Shilton Rodrigues a Frontend developer and designer specializing in building engaging digital experiences with modern web technologies.",
+    siteName: "ShiltonPortfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "DevPortfolio Preview",
+        alt: "ShiltonPortfolio Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevPortfolio | Creative Developer & Designer",
+    title: "ShiltonPortfolio | Creative Developer & Designer",
     description:
-      "Portfolio of a creative developer and designer specializing in building engaging digital experiences with modern web technologies.",
+      "Portfolio of Shilton Rodrigues a creative frontend developer and designer specializing in building engaging digital experiences with modern web technologies.",
     creator: "@username",
     images: ["/og-image.jpg"],
   },
