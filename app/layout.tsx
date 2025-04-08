@@ -15,7 +15,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "ShiltonPortfolio | Creative Developer & Designer",
   description:
-    "Portfolio of Shilton Rodrigues a creative frontend developer and designer specializing in building engaging digital experiences with modern web technologies.",
+    "Portfolio of Shilton Rodrigues, a creative frontend developer and designer specializing in building engaging digital experiences with modern web technologies.",
   keywords: [
     "developer",
     "designer",
@@ -26,15 +26,16 @@ export const metadata: Metadata = {
     "React",
     "Next.js",
   ],
-  authors: [{ name: "Developer Name" }],
-  creator: "Developer Name",
+  authors: [{ name: "Shilton Rodrigues" }],
+  creator: "Shilton Rodrigues",
+  generator: "v0.dev",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.example.com/",
     title: "ShiltonPortfolio | Creative Developer & Designer",
     description:
-      "Portfolio of Shilton Rodrigues a Frontend developer and designer specializing in building engaging digital experiences with modern web technologies.",
+      "Portfolio of Shilton Rodrigues, a frontend developer and designer specializing in building engaging digital experiences with modern web technologies.",
     siteName: "ShiltonPortfolio",
     images: [
       {
@@ -49,11 +50,23 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ShiltonPortfolio | Creative Developer & Designer",
     description:
-      "Portfolio of Shilton Rodrigues a creative frontend developer and designer specializing in building engaging digital experiences with modern web technologies.",
+      "Portfolio of Shilton Rodrigues, a creative frontend developer and designer.",
     creator: "@username",
     images: ["/og-image.jpg"],
   },
-  generator: "v0.dev",
+
+  // 🟩 PWA-specific additions
+  manifest: "/manifest.json",
+  themeColor: "#ffffff",
+  icons: {
+    icon: "/icon.png",
+    apple: "/icons/icon-192x192.png",
+  },
+  appleWebApp: {
+    capable: true,
+    title: "ShiltonPortfolio",
+    statusBarStyle: "default",
+  },
 };
 
 export default function RootLayout({
@@ -74,5 +87,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-import "./globals.css";

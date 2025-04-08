@@ -1,3 +1,6 @@
+import pwa from "next-pwa";
+import { resolve } from "path";
+
 let userConfig = undefined;
 try {
   userConfig = await import("./v0-user-next.config");
@@ -6,7 +9,7 @@ try {
 }
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+let nextConfig = {
   output: "export", // Enables static site export
   eslint: {
     ignoreDuringBuilds: true,
@@ -25,26 +28,29 @@ const nextConfig = {
   assetPrefix: process.env.NODE_ENV === "production" ? "/" : "",
 };
 
+// Apply user config merge
 mergeConfig(nextConfig, userConfig);
 
-function mergeConfig(nextConfig, userConfig) {
-  if (!userConfig) {
-    return;
-  }
+// Wrap with PWA
+const withPWA = pwa({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === "development",
+});
 
-  for (const key in userConfig) {
-    if (
-      typeof nextConfig[key] === "object" &&
-      !Array.isArray(nextConfig[key])
-    ) {
-      nextConfig[key] = {
-        ...nextConfig[key],
-        ...userConfig[key],
+export default withPWA(nextConfig);
+
+function mergeConfig(base, override) {
+  if (!override) return;
+  for (const key in override) {
+    if (typeof base[key] === "object" && !Array.isArray(base[key])) {
+      base[key] = {
+        ...base[key],
+        ...override[key],
       };
     } else {
-      nextConfig[key] = userConfig[key];
+      base[key] = override[key];
     }
   }
 }
-
-export default nextConfig;

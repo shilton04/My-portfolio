@@ -49,7 +49,7 @@ export default function Home() {
           <div className="flex flex-col justify-center space-y-4">
             <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
               <Image
-                src="/placeholder.svg?height=1080&width=1920"
+                src="/Images/projects/hbg.png"
                 alt="Abstract background"
                 fill
                 className="object-cover"
@@ -68,7 +68,9 @@ export default function Home() {
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
                     <AnimatedText text="Iam Shilton Rodrigues" />
                   </h1>
-                  <h5>Frontend Developer</h5>
+                  <h5 className="text-lg md:text-xl text-white/90 mb-2 max-w-2xl mx-auto">
+                    Frontend Developer & Desiginer
+                  </h5>
                 </motion.div>
 
                 <motion.div
@@ -98,7 +100,7 @@ export default function Home() {
                     asChild
                     size="lg"
                     variant="outline"
-                    className="border-white text-white hover:bg-white/10"
+                    className="border-white  transition-colors hover:bg-white/10"
                   >
                     <Link href="#contact">Get in Touch</Link>
                   </Button>
@@ -116,17 +118,17 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-          <div className="flex items-center justify-center">
+          {/* <div className="flex items-center justify-center">
             <div className="relative h-[300px] w-[300px] md:h-[400px] md:w-[400px] overflow-hidden rounded-full border-4 border-background bg-muted">
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png?height=400&width=400"
                 alt="Developer portrait"
                 fill
                 className="object-cover"
                 priority
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -169,7 +171,7 @@ export default function Home() {
               className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-md"
             >
               <Image
-                src="/placeholder.svg?height=1000&width=800"
+                src="/Images/projects/coder.png?height=1000&width=800"
                 alt="Portrait photo"
                 fill
                 className="object-cover"
@@ -458,7 +460,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <ProjectFilter />
+            {/* <ProjectFilter /> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
